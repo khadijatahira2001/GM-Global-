@@ -1,0 +1,43 @@
+.home{
+    
+    width:  100%;
+    height: 400;
+    margin-left: 0;
+    margin-right: 0;
+    
+    
+
+}
+/* ImageWithTextOverlay.css */
+.image-container {
+    position: relative;
+    
+  }
+  
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -90%);
+    text-align: justify;
+    justify-content: left;
+  }
+.title:hover{
+    cursor: pointer;
+    color: aqua;
+}
+
+  
+  .text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(235, 229, 229);
+   
+    
+    /* Add more styling as needed */
+  }
+  .text:hover{
+    cursor: pointer;
+    color: rgb(4, 60, 94);
+  }

@@ -19,9 +19,12 @@ const DrawerComp = () => {
         <List>
             {
                 PAGES.map((page,index)=>(
-                    <ListItemButton onClick={()=> setOpenDrawer(false)} key={index}>
+                       
+                    <ListItemButton  href={`#${page}`} onClick={()=> setOpenDrawer(false)} key={index}>
                     <ListItemIcon>
-                      <ListItemText>{page}</ListItemText>
+                      <ListItemText>
+                        {page}
+                        </ListItemText>
                     </ListItemIcon>
                   </ListItemButton>
 
