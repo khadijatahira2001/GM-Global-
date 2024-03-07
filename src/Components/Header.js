@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import {
   AppBar,
   Box,
@@ -13,7 +14,7 @@ import {
   ListItemText,
   Drawer,
   ListItem,
-  ListItemIcon
+  ListItemIcon,
 } from "@mui/material";
 import {
   Mail as MailIcon,
@@ -26,17 +27,32 @@ const pages = ["Home", "About Us", "Services", "Contact Us"];
 
 function Header() {
   const [open, setOpen] = React.useState(false);
-
+  const [isSticky, setIsSticky] = useState(true);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+  const handleScroll = () => {
+  
+
+    if (window.scrollY > 0 && !isSticky || isSticky) {
+      setIsSticky(true);
+    } else if(window.scrollY ===0 && isSticky) {
+      setIsSticky(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <Toolbar />
 
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -49,7 +65,7 @@ function Header() {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -63,10 +79,16 @@ function Header() {
     </Box>
   );
 
-
   return (
     <>
-      <AppBar id="MAIN_APP_BAR" position="static">
+      <AppBar
+        id="MAIN_APP_BAR"
+        position={isSticky ? "fixed" : "static"}
+        sx={{
+          backgroundColor: isSticky ? "#0284c7" : "transparent",
+          boxShadow: isSticky ? "0px 1px 5px rgba(0,0,0,0.1)" : "none",
+        }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -95,7 +117,6 @@ function Header() {
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={toggleDrawer(!open)}
-                
                 color="inherit"
               >
                 <MenuIcon />
