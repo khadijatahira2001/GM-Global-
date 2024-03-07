@@ -9,7 +9,8 @@ import {  CardActionArea } from '@mui/material';
 
 export default function MultiActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 345, height:400 ,marginLeft:10, marginTop:-10,padding:10 ,display:'flex'}} className='card1'>
+    <div className='CardStyle'>
+ <Card sx={{ maxWidth: 345, height:400}} className='card1'>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -45,6 +46,8 @@ export default function MultiActionAreaCard() {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
+   
 
     
   );
