@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <section className="image-container ">
+      <div className="image-container ">
         <img className="home"
           src="/images/img (1).png"
           alt="Logo"
@@ -22,7 +22,7 @@ const Home = () => {
         </p>
         </div>
         
-      </section>
+      </div>
     </div>
   );
 };
