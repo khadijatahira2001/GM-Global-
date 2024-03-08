@@ -38,21 +38,7 @@ function Header(props) {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-  const handleScroll = () => {
-  
 
-    if (window.scrollY > 0 && !isSticky || isSticky) {
-      setIsSticky(true);
-    } else if(window.scrollY ===0 && isSticky) {
-      setIsSticky(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const handleButtonClick = (pageURL) => {
     history.push(pageURL);
@@ -61,20 +47,6 @@ function Header(props) {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <Toolbar />
-
-      {/* <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider /> */}
       <List>
         {pages.map((page, index) => (
           <ListItem key={index} disablePadding>
@@ -94,10 +66,7 @@ function Header(props) {
     <>
       <AppBar
         id="MAIN_APP_BAR"
-        // position={isSticky ? "fixed" : "static"}
-        // sx={{
-        //   backgroundColor: isSticky ? "#0284c7" : "transparent",
-        //   boxShadow: isSticky ? "0px 1px 5px rgba(0,0,0,0.1)" : "none",
+      
         position="sticky"
         sx={{
           backgroundColor: "ghostwhite",
