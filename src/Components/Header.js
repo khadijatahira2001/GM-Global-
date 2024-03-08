@@ -22,10 +22,17 @@ import {
   MoveToInbox as InboxIcon,
   Adb as AdbIcon,
 } from "@mui/icons-material";
+import { withRouter } from "react-router-dom";
+const pages = [
+  { title: "Home", pageUrl: "/" },
+  { title: "About US", pageUrl: "/about" },
+  { title: "Services", pageUrl: "/services" },
+  { title: "Contact US", pageUrl: "/contact" },
+];
 
-const pages = ["Home", "About Us", "Services", "Contact Us"];
-
-function Header() {
+function Header(props) {
+  console.log("props in header", props);
+  const { history } = props;
   const [open, setOpen] = React.useState(false);
   const [isSticky, setIsSticky] = useState(true);
   const toggleDrawer = (newOpen) => () => {
@@ -47,11 +54,15 @@ function Header() {
     };
   }, []);
 
+  const handleButtonClick = (pageURL) => {
+    history.push(pageURL);
+  };
+
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <Toolbar />
 
-      <List>
+      {/* <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -63,15 +74,15 @@ function Header() {
           </ListItem>
         ))}
       </List>
-      <Divider />
+      <Divider /> */}
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
+        {pages.map((page, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton onClick={() => handleButtonClick(page.pageUrl)}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <InboxIcon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={page.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -83,10 +94,14 @@ function Header() {
     <>
       <AppBar
         id="MAIN_APP_BAR"
-        position={isSticky ? "fixed" : "static"}
+        // position={isSticky ? "fixed" : "static"}
+        // sx={{
+        //   backgroundColor: isSticky ? "#0284c7" : "transparent",
+        //   boxShadow: isSticky ? "0px 1px 5px rgba(0,0,0,0.1)" : "none",
+        position="sticky"
         sx={{
-          backgroundColor: isSticky ? "#0284c7" : "transparent",
-          boxShadow: isSticky ? "0px 1px 5px rgba(0,0,0,0.1)" : "none",
+          backgroundColor: "ghostwhite",
+          color: "black",
         }}
       >
         <Container maxWidth="xl">
@@ -156,9 +171,10 @@ function Header() {
                 <Button
                   key={page}
                   // onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  onClick={() => handleButtonClick(page.pageUrl)}
+                  sx={{ my: 2, color: "black", display: "block" }}
                 >
-                  {page}
+                  {page.title}
                 </Button>
               ))}
             </Box>
@@ -171,4 +187,4 @@ function Header() {
     </>
   );
 }
-export default Header;
+export default withRouter(Header);

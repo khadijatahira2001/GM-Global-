@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div
+    style={{backgroundColor:"gold", height:"100px"}}
+    >Footer</div>
   )
 }
 

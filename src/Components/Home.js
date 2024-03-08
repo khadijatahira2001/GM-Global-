@@ -1,10 +1,12 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import backgrdImg from "../Assets/main_background.png";
+import "../Styles/Home.css";
 const Home = () => {
-  return <div >
-    <img className="md:w-full md:max-h-screen
-" src={backgrdImg}/>
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+  return (
+    <div style={{ height: "100vh", backgroundColor: "plum" }}>
+      <Box className="hero_container">
+        {/* <div className="hero_text_container"> */}
+        <div className="hero_text_container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
   <h5 className="text-4xl font-bold">Building Engineering Professionals</h5>
   <hr className="max-w-[900px] mt-4 border-blue-950"/>
   <p className="mt-4 text-2xl">New Construction | Restoration | Inspection | Testing</p>
@@ -16,7 +18,9 @@ const Home = () => {
 </button>
 
 </div>
-    
-  </div>;
+        {/* </div> */}
+      </Box>
+    </div>
+  );
 };
 export default Home;
