@@ -9,3 +9,21 @@
     overflow-y: auto; /* Enable vertical scrolling for content */
   }
   
+
+  /* Scrollbar.css */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cecdcd; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b4b3b3; /* Color of the thumb on hover */
+}
