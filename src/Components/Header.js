@@ -19,7 +19,7 @@ import {
   Tab,
   ListItemIcon,
 } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from "@mui/material/styles";
 import {
   Mail as MailIcon,
   Menu as MenuIcon,
@@ -40,16 +40,16 @@ function Header(props) {
   const { history } = props;
   const [value, setValue] = useState(getTabValue());
 
-  function getTabValue(){
+  function getTabValue() {
     const pathName = window.location.pathname;
     const PageNames = {
-    "/":0,
-    "/about":1,
-    "/services":2,
-    "/contact":3
+      "/": 0,
+      "/about": 1,
+      "/services": 2,
+      "/contact": 3,
+    };
+    return PageNames[pathName];
   }
-  return PageNames[pathName]
-}
   const handleChange = (event, newValue) => {
     setValue(newValue);
     handleButtonClick(pages[newValue].pageUrl);
