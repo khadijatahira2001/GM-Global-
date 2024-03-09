@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+
 import {
   AppBar,
   Box,
@@ -14,8 +15,11 @@ import {
   ListItemText,
   Drawer,
   ListItem,
+  Tabs,
+  Tab,
   ListItemIcon,
 } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import {
   Mail as MailIcon,
   Menu as MenuIcon,
@@ -32,13 +36,29 @@ const pages = [
 
 function Header(props) {
   console.log("props in header", props);
+  const theme = useTheme();
   const { history } = props;
+  const [value, setValue] = useState(getTabValue());
+
+  function getTabValue() {
+    const pathName = window.location.pathname;
+    const PageNames = {
+      "/": 0,
+      "/about": 1,
+      "/services": 2,
+      "/contact": 3,
+    };
+    return PageNames[pathName];
+  }
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+    handleButtonClick(pages[newValue].pageUrl);
+  };
+
   const [open, setOpen] = React.useState(false);
-  const [isSticky, setIsSticky] = useState(true);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
 
   const handleButtonClick = (pageURL) => {
     history.push(pageURL);
@@ -65,36 +85,48 @@ function Header(props) {
   return (
     <>
       <AppBar
-        id="MAIN_APP_BAR"
-      
         position="sticky"
         sx={{
-          backgroundColor: "ghostwhite",
+          backgroundColor: "white",
           color: "black",
         }}
       >
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+          <Toolbar
+            disableGutters
+            id="main_tool_bar"
+            style={{
+              display: "flex",
+            }}
+            sx={{ justifyContent: { xs: "flex-start", md: "space-between" } }}
+          >
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                LOGO
+              </Typography>
+            </Box>
+
+            <Box
               sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
+                flexGrow: { xs: 0, md: 1 },
+                display: { xs: "flex", md: "none" },
               }}
             >
-              LOGO
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -106,46 +138,51 @@ function Header(props) {
                 <MenuIcon />
               </IconButton>
             </Box>
+            <Box sx={{ margin: { xs: "0 auto", md: "0" } }}>
+              <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
 
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              LOGO
-            </Typography>
+              <Typography
+                variant="h5"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                  mr: 2,
+                  display: { xs: "flex", md: "none" },
+                  flexGrow: 1,
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                LOGO
+              </Typography>
+            </Box>
 
             <Box
-              id="pagesTest"
               sx={{
-                flexGrow: 1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: { md: "flex-end" },
               }}
             >
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  // onClick={handleCloseNavMenu}
-                  onClick={() => handleButtonClick(page.pageUrl)}
-                  sx={{ my: 2, color: "black", display: "block" }}
-                >
-                  {page.title}
-                </Button>
-              ))}
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                textColor="primary"
+                indicatorColor="primary"
+                aria-label="secondary tabs example"
+              >
+                {pages.map((page, index) => (
+                  <Tab
+                    disableRipple={true}
+                    disableFocusRipple={true}
+                    key={index}
+                    label={page.title}
+                  />
+                ))}
+              </Tabs>
             </Box>
           </Toolbar>
         </Container>
