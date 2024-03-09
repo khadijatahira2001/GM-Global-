@@ -71,7 +71,6 @@ export default function ContactUS() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             margin="normal"
-            required
             type="phone"
           />
 
@@ -100,14 +99,16 @@ export default function ContactUS() {
       <Box
         style={{
           maxWidth: 500,
-          margin: "0px 80px",
         }}
-      >
+        sx={{
+
+          margin: {xs: "30px 0px 0px" ,lg:"0px 80px"},
+        }}
+        >
         <Typography
           variant="h6"
           sx={{
             pb: 8,
-            // color: "#5e5e5e"
           }}
         >
           Thank you for visiting the website of GM Global. If you have any
