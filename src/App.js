@@ -10,6 +10,7 @@ import Services from "./Components/Services";
 import "./App.css";
 import { ThemeProvider, styled } from "@mui/material/styles";
 import { theme } from "./utils/newTheme";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>

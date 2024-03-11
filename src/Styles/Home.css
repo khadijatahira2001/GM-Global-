@@ -6,7 +6,7 @@
     background-size: cover;
     display: table;
     background-attachment: fixed;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("//img1.wsimg.com/isteam/ip/94953300-27f2-45f6-a137-8c68f6ffb407/1.JPG/:/rs=w:1535,m");
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(${imagePaths[currentImageIndex]}); */
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(https://img1.wsimg.com/isteam/ip/94953300-27f2-45f6-a137-8c68f6ffb407/1.JPG/:/rs=w:767,m); */
     position: relative;
 }
