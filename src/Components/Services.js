@@ -1,5 +1,6 @@
 import React from "react";
-import Cards from "../Shared/Cards"
+import Cards from "../Shared/Cards";
+
 const Services = () => {
   return (
     <div class="mr-32 ml-32 mt-16">
@@ -40,22 +41,20 @@ const Services = () => {
             </h4>
           </div>
         </div>
-       
-       
       </div>
       <div className="mb-32 mt-32">
-        <Cards/>
+        <Cards />
       </div>
       <div className="ml-6 mr-auto mb-12 mt-16">
-      <img class="size-full content-center"
+        <img
+          class="size-full content-center"
           src="https://img1.wsimg.com/isteam/ip/94953300-27f2-45f6-a137-8c68f6ffb407/Restoration-1.JPG/:/rs=w:719,h:360,cg:true,m/cr=w:719,h:360/qt=q:10"
           alt="image"
         />
       </div>
       <div className="ml-4 mb-12 mt-32">
         <h1 className="text-4xl font-bold text-black text-center mb-20">
-        Building Science
-
+          Building Science
         </h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 ">
@@ -66,8 +65,7 @@ const Services = () => {
               alt=""
             />
             <h4 className="text-center text-2xl text-bold mt-12">
-            Condition Assessment
-
+              Condition Assessment
             </h4>
           </div>
           <div>
@@ -77,28 +75,24 @@ const Services = () => {
               alt=""
             />
             <h4 className="text-center text-2xl text-bold mt-12">
-            Fire Safety System
-
+              Fire Safety System
             </h4>
           </div>
         </div>
-       
-       
       </div>
       <div className="mb-32 mt-32">
-        <Cards/>
+        <Cards />
       </div>
       <div className="ml-6 mr-auto mb-12 mt-16">
-      <img class="size-full content-center"
+        <img
+          class="size-full content-center"
           src="https://img1.wsimg.com/isteam/ip/94953300-27f2-45f6-a137-8c68f6ffb407/Inspection-2.JPG/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:1240,h:620,cg:true"
           alt="image"
         />
       </div>
       <div className="ml-4 mb-12 mt-32">
         <h1 className="text-4xl font-bold text-black text-center mb-20">
-        Below Grade Waterproofing
-
-
+          Below Grade Waterproofing
         </h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 ">
@@ -109,9 +103,7 @@ const Services = () => {
               alt=""
             />
             <h4 className="text-center text-2xl text-bold mt-12">
-            Foundation Waterproofing
-
-
+              Foundation Waterproofing
             </h4>
           </div>
           <div>
@@ -120,35 +112,30 @@ const Services = () => {
               src="https://img1.wsimg.com/isteam/ip/94953300-27f2-45f6-a137-8c68f6ffb407/Inspection-1.JPG/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300"
             />
             <h4 className="text-center text-2xl text-bold mt-12">
-            Garage Slab Protection
-
-
+              Garage Slab Protection
             </h4>
           </div>
         </div>
-       
-       
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 mb-40 ml-40">
-  <a
-    href="#"
-    className="max-w-sm h-96 p-10 dark:bg-orange-500 dark:hover:bg-orange-400 flex items-center"
-  >
-    <h5 className="mb-2 text-4xl font-bold tracking-tight text-center text-black transition-transform transform hover:text-shadow hover:-translate-y-1">
-      Condominium projects
-    </h5>
-  </a>
+        <a
+          href="#"
+          className="max-w-sm h-96 p-10 dark:bg-orange-500 dark:hover:bg-orange-400 flex items-center"
+        >
+          <h5 className="mb-2 text-4xl font-bold tracking-tight text-center text-black transition-transform transform hover:text-shadow hover:-translate-y-1">
+            Condominium projects
+          </h5>
+        </a>
 
-  <a
-    href="#"
-    className="flex items-center max-w-sm p-6 dark:bg-orange-500 dark:hover:bg-orange-400 "
-  >
-    <h5 className="mb-2 text-4xl font-bold tracking-tight text-center text-black px-16 transition-transform transform hover:text-shadow hover:-translate-y-1">
-      Field Testing
-    </h5>
-  </a>
-</div>
-
+        <a
+          href="#"
+          className="flex items-center max-w-sm p-6 dark:bg-orange-500 dark:hover:bg-orange-400 "
+        >
+          <h5 className="mb-2 text-4xl font-bold tracking-tight text-center text-black px-16 transition-transform transform hover:text-shadow hover:-translate-y-1">
+            Field Testing
+          </h5>
+        </a>
+      </div>
     </div>
   );
 };
