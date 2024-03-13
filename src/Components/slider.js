@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { useState, useEffect } from "react";
+import "tailwindcss/tailwind.css";
 
 import "../Styles/Home.css";
 

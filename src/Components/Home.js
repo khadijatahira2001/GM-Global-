@@ -4,11 +4,23 @@ import { useState, useEffect } from "react";
 import cd1 from "../Assets/cd1.png";
 import cd2 from "../Assets/cd2.png";
 import cd3 from "../Assets/cd3.png";
+import S1 from "../Assets/S1.jpg";
+import p1 from "../Assets/p1.jpg";
+import p2 from "../Assets/p2.jpg";
+import CardSlider from "../Shared/CardSlider.js";
+import Testimonials from "../Shared/Testimonials.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css";
+import { EffectFade } from "swiper/modules";
 
 import Slider from "./Slider";
 import Content from "./Content";
 import "../Styles/Home.css";
-import SimpleCards from "../Shared/SimpleCards";
+import SimpleCards from "../Shared/SimpleCards.js";
 const Home = () => {
   const cardData = [
     {
@@ -30,6 +42,94 @@ const Home = () => {
         " Ensure the structural integrity of your building with our thorough inspection and testing services. Our experts provide detailed assessments to meet safety standards.",
     },
   ];
+  const cardData1 = [
+    {
+      title: "BUILDING CONSTRUCTION",
+      icon: <img src={S1} alt="" className=" w-96 h-48 " />,
+      description:
+        "Unleash the power of creativity and watch your projects come to life with precision and style,Discover our restoration services that bring new life to old structures. ",
+    },
+    {
+      title: " PRE-CONSTRUCTION",
+      icon: (
+        <img
+          src="https://preview.colorlib.com/theme/pivot/img/work_thumb_3.jpg.webp"
+          alt=""
+          className=" w-96 h-48"
+        />
+      ),
+      description:
+        "Unleash the power of creativity and watch your projects come to life with precision and style,Discover our restoration services that bring new life to old structures. ",
+    },
+    {
+      title: "MAINTENANCE & REPAIR",
+      icon: (
+        <img
+          src="https://preview.colorlib.com/theme/constructo/img/service/1.png.webp"
+          alt=""
+          className=" w-96 h-48"
+        />
+      ),
+      description:
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+    },
+    {
+      title: "HOUSE RENOVATION",
+      icon: (
+        <img
+          src="https://preview.colorlib.com/theme/pivot/img/work_thumb_1.jpg.webp"
+          alt=""
+          className=" w-96 h-48"
+        />
+      ),
+      description:
+        " Ensure the structural integrity of your building with our thorough inspection and testing services. Our experts provide detailed assessments to meet safety standards.",
+    },
+    {
+      title: "GENERAL CONTRACTING",
+      icon: (
+        <img
+          src="https://preview.colorlib.com/theme/pivot/img/work_thumb_2.jpg.webp"
+          alt=""
+          className=" w-96 h-48"
+        />
+      ),
+      description:
+        " Ensure the structural integrity of your building with our thorough inspection and testing services. Our experts provide detailed assessments to meet safety standards.",
+    },
+  ];
+  const Testimonial = [
+    {
+      title: "Restoration",
+      icon: <img src={p1} alt="" className="rounded-full w-20 h-20 ml-10" />,
+      description:
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+    },
+    {
+      title: "Restoration",
+      icon: <img src={p2} alt="" className="rounded-full w-20 h-20 ml-10" />,
+      description:
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+    },
+    {
+      title: "Restoration",
+      icon: <img src={p1} alt="" className="rounded-full w-20 h-20 ml-10" />,
+      description:
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+    },
+    {
+      title: "Restoration",
+      icon: <img src={p2} alt="" className="rounded-full w-20 h-20 ml-10" />,
+      description:
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+    },
+    {
+      title: "Restoration",
+      icon: <img src={p1} alt="" className="rounded-full w-20 h-20 ml-10" />,
+      description:
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+    },
+  ];
   return (
     <div style={{ backgroundColor: "white" }}>
       <Slider />
@@ -41,7 +141,12 @@ const Home = () => {
 
       <Content />
       <hr className=" w-3/4 ml-44 items-center" />
+      {/* <div className="flex content-center items-center justify-center flex-wrap space-x-4 "> */}
+      <CardSlider cardData={cardData1} />
+      {/* </div> */}
+      <hr className=" w-3/4 ml-44 items-center" />
 
+      <Testimonials cardData={Testimonial} />
       <div className="mt-10 flex flex-col items-center">
         <h1 className="text-4xl font-bold text-black ">
           Specializing in Engineering Solutions
