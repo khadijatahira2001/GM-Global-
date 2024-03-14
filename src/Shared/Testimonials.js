@@ -46,22 +46,15 @@ const Testimonials = ({ cardData }) => {
     >
       <SwiperSlide className="swiper-slide-custom ">
           
-          <img src={cd1} alt="" className="w-48 h-auto hadow-xl " />
-          <div className="mt-4 p-4 auto ">
+          <img src={cd1} alt="" className="hadow-xl w-auto h-14" />
+          <div className="mt-1 p-4 auto ">
             <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
               Adil Mustafa
             </h2>
             <p className="text-sm md:text-base lg:text-lg">
               Working with [Construction Consultant Company] was an absolute
               game-changer for our project. Their expert guidance and insightful
-              strategies transformed our vision into a tangible reality. From
-              inception to completion, their attention to detail and dedication
-              to excellence were evident every step of the way. Their team's
-              professionalism and commitment to delivering results surpassed our
-              expectations. Thanks to their guidance, our project not only met
-              but exceeded our goals, setting a new standard in quality and
-              efficiency. Without a doubt, we highly recommend GM-Global for any
-              construction endeavor.
+              strategies t
             </p>
           </div>
       </SwiperSlide>

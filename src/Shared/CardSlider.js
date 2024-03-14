@@ -1,30 +1,51 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css";
-import { EffectFade } from "swiper/modules";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+import "swiper/css/navigation";
+import "../Styles/Swiper.css";
+import cd1 from "../Assets/cd1.png";
+
+// import required modules
+import {
+  Autoplay,
+  FreeMode,
+  Pagination,
+  Mousewheel,
+  Navigation,
+} from "swiper/modules";
+import "../Styles/Swiper.css"
 const CardSlider = ({ cardData }) => {
   return (
-    <div className="mt-10 p-10 mb-10 ">
+    <div >
       <h4 className="text-center text-4xl">Our Services</h4>
-      <Swiper slidesPerView={3} navigation modules={[Navigation]}>
+    
+      <Swiper
+      slidesPerView={3}
+      spaceBetween={30}
+      // freeMode={true}
+      // mousewheel={true}
+      // loop={true}
+      // navigation={true}
+      // autoplay={{
+      //   delay: 1500,
+      //   pauseOnMouseEnter: true,
+      // }}
+      // pagination={{
+      //   clickable: true,
+      // }}
+      modules={[Autoplay, FreeMode, Mousewheel, Navigation, Pagination]}
+      className="mySwiper"
+    >
+
         {cardData.map((card) => (
-          <SwiperSlide>
-            <div className="card w-96 lg:w-96 bg-base-100 mt-20 min-h-96 mx-2 ml-14 shadow-xl rounded-xl text-center  bg-white hover:bg-gray-100 cursor-pointer">
-              <figure className=" pt-10 mb-6  text-center">{card.icon}</figure>
-              <div className="card-body items-center ">
-                <h2 className="card-title text-lg md:text-xl lg:text-2xl mb-2 hover:text-primary">
-                  {card.title}
-                </h2>
-                <p className="text-content_color text-sm md:text-base lg:text-lg ">
-                  {card.description}
-                </p>
-              </div>
-            </div>
+          <SwiperSlide className="swiper-slide-custom ">
+            {card.title}
           </SwiperSlide>
         ))}
       </Swiper>
