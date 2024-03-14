@@ -9,11 +9,7 @@ import p1 from "../Assets/p1.jpg";
 import p2 from "../Assets/p2.jpg";
 import CardSlider from "../Shared/CardSlider.js";
 import Testimonials from "../Shared/Testimonials.js";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 import "swiper/css";
 import { EffectFade } from "swiper/modules";
 
@@ -33,7 +29,7 @@ const Home = () => {
       title: "Restoration",
       icon: <img src={cd2} alt="" className="rounded-xl w-32 h-32 ml-10" />,
       description:
-        "Discover our restoration services that bring new life to old structures We specialize in preserving the past while invorporating modern techniques for lasting results.",
+        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
     },
     {
       title: " Inspection & Testing",
@@ -133,19 +129,18 @@ const Home = () => {
   return (
     <div style={{ backgroundColor: "white" }}>
       <HeroSection />
-      <div className="flex content-center items-stretch justify-center flex-wrap space-x-6  ">
+      <div className="flex content-center items-center justify-center flex-wrap space-x-4 ">
         {cardData.map((card, index) => (
           <SimpleCards key={index} {...card} />
         ))}
       </div>
 
       <Content />
-      <hr className=" w-3/4 ml-44 items-center mb-20" />
-      <h4 className="text-center text-4xl">Our Services</h4>
+      <hr className=" w-3/4 ml-44 mb-20" />
       {/* <div className="flex content-center items-center justify-center flex-wrap space-x-4 "> */}
       <CardSlider cardData={cardData1} />
       {/* </div> */}
-      <hr className="mt-20 w-3/4 ml-44 items-center" />
+      <hr className=" w-3/4 ml-44 mb-20" />
 
       <Testimonials cardData={Testimonial} />
       <div className="mt-10 flex flex-col items-center">
