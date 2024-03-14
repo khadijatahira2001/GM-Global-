@@ -17,7 +17,7 @@ import "swiper/css/scrollbar";
 import "swiper/css";
 import { EffectFade } from "swiper/modules";
 
-import Slider from "./Slider";
+import HeroSection from "./HeroSection.js";
 import Content from "./Content";
 import "../Styles/Home.css";
 import SimpleCards from "../Shared/SimpleCards.js";
@@ -33,7 +33,7 @@ const Home = () => {
       title: "Restoration",
       icon: <img src={cd2} alt="" className="rounded-xl w-32 h-32 ml-10" />,
       description:
-        "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+        "Discover our restoration services that bring new life to old structures We specialize in preserving the past while invorporating modern techniques for lasting results.",
     },
     {
       title: " Inspection & Testing",
@@ -132,19 +132,20 @@ const Home = () => {
   ];
   return (
     <div style={{ backgroundColor: "white" }}>
-      <Slider />
-      <div className="flex content-center items-center justify-center flex-wrap space-x-4 ">
+      <HeroSection />
+      <div className="flex content-center items-stretch justify-center flex-wrap space-x-6  ">
         {cardData.map((card, index) => (
           <SimpleCards key={index} {...card} />
         ))}
       </div>
 
       <Content />
-      <hr className=" w-3/4 ml-44 items-center" />
+      <hr className=" w-3/4 ml-44 items-center mb-20" />
+      <h4 className="text-center text-4xl">Our Services</h4>
       {/* <div className="flex content-center items-center justify-center flex-wrap space-x-4 "> */}
       <CardSlider cardData={cardData1} />
       {/* </div> */}
-      <hr className=" w-3/4 ml-44 items-center" />
+      <hr className="mt-20 w-3/4 ml-44 items-center" />
 
       <Testimonials cardData={Testimonial} />
       <div className="mt-10 flex flex-col items-center">

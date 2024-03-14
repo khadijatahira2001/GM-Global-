@@ -5,7 +5,7 @@ import "tailwindcss/tailwind.css";
 
 import "../Styles/Home.css";
 
-const Slider = () => {
+const HeroSection = () => {
   const imagePaths = [
     "https://img.freepik.com/free-photo/beautiful-view-construction-site-city-during-sunset_181624-9347.jpg?w=996&t=st=1710190860~exp=1710191460~hmac=567b5cce350c3cc23faa65605c8a0e2c1afb4e01db6acae961492c049cb34b75",
     "https://img.freepik.com/free-photo/construction-works-frankfurt-downtown-germany_1268-20907.jpg?w=1060&t=st=1710190953~exp=1710191553~hmac=a741c5fdbc9fe3cb95347ce9155e8b98944997cdb270aa2dfc9eabd8a45ce5b9",
@@ -118,4 +118,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default HeroSection;
