@@ -9,15 +9,11 @@ import p1 from "../Assets/p1.jpg";
 import p2 from "../Assets/p2.jpg";
 import CardSlider from "../Shared/CardSlider.js";
 import Testimonials from "../Shared/Testimonials.js";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 import "swiper/css";
 import { EffectFade } from "swiper/modules";
 
-import Slider from "./Slider";
+import HeroSection from "./HeroSection.js";
 import Content from "./Content";
 import "../Styles/Home.css";
 import SimpleCards from "../Shared/SimpleCards.js";
@@ -132,7 +128,7 @@ const Home = () => {
   ];
   return (
     <div style={{ backgroundColor: "white" }}>
-      <Slider />
+      <HeroSection />
       <div className="flex content-center items-center justify-center flex-wrap space-x-4 ">
         {cardData.map((card, index) => (
           <SimpleCards key={index} {...card} />
@@ -140,11 +136,11 @@ const Home = () => {
       </div>
 
       <Content />
-      <hr className=" w-3/4 ml-44 items-center" />
+      <hr className=" w-3/4 ml-44 mb-20" />
       {/* <div className="flex content-center items-center justify-center flex-wrap space-x-4 "> */}
       <CardSlider cardData={cardData1} />
       {/* </div> */}
-      <hr className=" w-3/4 ml-44 items-center" />
+      <hr className=" w-3/4 ml-44 mb-20" />
 
       <Testimonials cardData={Testimonial} />
       <div className="mt-10 flex flex-col items-center">

@@ -20,7 +20,7 @@ import {
   Navigation,
 } from "swiper/modules";
 
-const Testimonials = ({ cardData }) => {
+const Testimonial = ({ cardData }) => {
   return (
     // <div className="mt-10 p-10 mb-10">
     
@@ -73,4 +73,4 @@ const Testimonials = ({ cardData }) => {
   );
 };
 
-export default Testimonials;
+export default Testimonial;
