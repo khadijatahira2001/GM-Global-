@@ -7,14 +7,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
-
+import "../Styles/TestimonialStyle.css";
 import { EffectFade } from "swiper/modules";
-import { Navigation, Pagination,Autoplay, FreeMode,Mousewheel, Scrollbar, A11y } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  FreeMode,
+  Mousewheel,
+  Scrollbar,
+  A11y,
+} from "swiper/modules";
 
 const Testimonial = ({ cardData }) => {
   return (
     <div>
-                <h4 className="text-center font-bold text-4xl">Testimonials</h4>
+      <h4 className="text-center font-bold text-4xl">Testimonials</h4>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -22,35 +30,48 @@ const Testimonial = ({ cardData }) => {
         mousewheel={true}
         loop={true}
         autoplay={{
-            delay:1500,
-            pauseOnMouseEnter:true,
+          delay: 1500,
+          pauseOnMouseEnter: true,
         }}
         navigation
         pagination={{
-            clickable: true,
+          clickable: true,
         }}
-        modules={[Autoplay,FreeMode,Mousewheel,Navigation,Pagination]}
+        breakpoints={{
+          '@0.00': {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          '@0.75': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '@1.00': {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        
+        }}
+        modules={[Autoplay, FreeMode, Mousewheel, Navigation, Pagination]}
         className=""
       >
         {cardData.map((card) => (
-             
-          <SwiperSlide className="">
-            <div className="  card w-96 lg:w-96 bg-base-100 mt-20 min-h-96 ml-14 shadow-xl rounded-xl text-center  bg-white hover:bg-gray-100 cursor-pointer">
-              <figure className=" pt-10 mb-6  text-center flex ml-24">{card.icon}</figure>
+          <SwiperSlide className="swiper-slide-custom ">
+              {/* <figure className=" pt-10 mb-6  mr-20"> */}
+             <img className="rounded-full w-20 h-20 ml-10 mr-16 mt-10" src={card.icon}/>   
+              {/* </figure> */}
               <div className="card-body items-center ">
-                <h2 className="card-title text-lg md:text-xl lg:text-2xl font-bold hover:text-primary">
+                <h2 className="p-4 font-bold hover:text-primary">
                   {card.title}
                 </h2>
-                <p className="text-content_color text-sm md:text-base lg:text-lg p-10">
-                  {card.description}
+                <p className="p-6 "><q>
+                  {card.description}</q>
                 </p>
               </div>
-            </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
-
   );
 };
 
