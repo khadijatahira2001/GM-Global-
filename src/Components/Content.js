@@ -2,8 +2,8 @@ import React from "react";
 
 function Content() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mt-10 ml-20 mb-20">
-      <div className="flex items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-10 ml-40 mb-20 ">
+      <div className="">
         <img
           src="https://preview.colorlib.com/theme/constructo/img/about/about.png.webp"
           alt=""

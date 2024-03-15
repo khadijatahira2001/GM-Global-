@@ -5,71 +5,71 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
-
-import "swiper/css/navigation";
-import "../Styles/Swiper.css";
-import cd1 from "../Assets/cd1.png";
-
-// import required modules
+import "../Styles/TestimonialStyle.css";
+import { EffectFade } from "swiper/modules";
 import {
+  Navigation,
+  Pagination,
   Autoplay,
   FreeMode,
-  Pagination,
   Mousewheel,
-  Navigation,
+  Scrollbar,
+  A11y,
 } from "swiper/modules";
 
 const Testimonial = ({ cardData }) => {
   return (
-    // <div className="mt-10 p-10 mb-10">
-    
-    <>
-     <h4 className="text-center text-4xl">Testimonials</h4>
-    
-    <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
-      freeMode={true}
-      mousewheel={true}
-      loop={true}
-      navigation={true}
-      autoplay={{
-        delay: 1500,
-        pauseOnMouseEnter: true,
-      }}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Autoplay, FreeMode, Mousewheel, Navigation, Pagination]}
-      className="mySwiper"
-    >
-      <SwiperSlide className="swiper-slide-custom ">
-          
-          <img src={cd1} alt="" className="hadow-xl w-auto h-14" />
-          <div className="mt-1 p-4 auto ">
-            <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
-              Adil Mustafa
-            </h2>
-            <p className="text-sm md:text-base lg:text-lg">
-              Working with [Construction Consultant Company] was an absolute
-              game-changer for our project. Their expert guidance and insightful
-              strategies t
-            </p>
-          </div>
-      </SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 2</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 3</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 4</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 5</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 6</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 7</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 8</SwiperSlide>
-      <SwiperSlide className="swiper-slide-custom">Slide 9</SwiperSlide>
-    </Swiper>
-    </>
-
-    // </div>
+    <div>
+      <h4 className="text-center font-bold text-4xl">Testimonials</h4>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        freeMode={true}
+        mousewheel={true}
+        loop={true}
+        autoplay={{
+          delay: 1500,
+          pauseOnMouseEnter: true,
+        }}
+        navigation
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          '@0.00': {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          '@0.75': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '@1.00': {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        
+        }}
+        modules={[Autoplay, FreeMode, Mousewheel, Navigation, Pagination]}
+        className=""
+      >
+        {cardData.map((card) => (
+          <SwiperSlide className="swiper-slide-custom ">
+              {/* <figure className=" pt-10 mb-6  mr-20"> */}
+             <img className="rounded-full w-20 h-20 ml-10 mr-16 mt-10" src={card.icon}/>   
+              {/* </figure> */}
+              <div className="card-body items-center ">
+                <h2 className="p-4 font-bold hover:text-primary">
+                  {card.title}
+                </h2>
+                <p className="p-6 "><q>
+                  {card.description}</q>
+                </p>
+              </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

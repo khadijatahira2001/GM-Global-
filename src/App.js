@@ -13,7 +13,7 @@ import { theme } from "./utils/newTheme";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <Router>
         <Header />
         <Switch>
