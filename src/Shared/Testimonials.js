@@ -7,8 +7,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
+
 import "../Styles/TestimonialStyle.css";
 import { EffectFade } from "swiper/modules";
+import { testiMonial } from '../Constants';
+
 import {
   Navigation,
   Pagination,
@@ -19,7 +22,7 @@ import {
   A11y,
 } from "swiper/modules";
 
-const Testimonial = ({ cardData }) => {
+const Testimonial = () => {
   return (
     <div>
       <h4 className="text-center font-bold text-4xl">Testimonials</h4>
@@ -55,7 +58,7 @@ const Testimonial = ({ cardData }) => {
         modules={[Autoplay, FreeMode, Mousewheel, Navigation, Pagination]}
         className=""
       >
-        {cardData.map((card) => (
+        {testiMonial.map((card) => (
           <SwiperSlide className="swiper-slide-custom ">
               {/* <figure className=" pt-10 mb-6  mr-20"> */}
              <img className="rounded-full w-20 h-20 ml-10 mr-16 mt-10" src={card.icon}/>   

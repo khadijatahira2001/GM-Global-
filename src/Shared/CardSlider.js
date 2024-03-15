@@ -7,9 +7,10 @@ import "swiper/css/free-mode";
 import "swiper/css";
 import { EffectFade } from "swiper/modules";
 import "../Styles/CardStyle.css";
+import { serviceCards } from '../Constants';
 import { Navigation, Pagination,Autoplay, FreeMode,Mousewheel, Scrollbar, A11y } from "swiper/modules";
 
-const CardSlider = ({ cardData }) => {
+const CardSlider = () => {
   return (
     <div>
       <h4 className="text-center text-4xl">Our Services</h4>
@@ -41,7 +42,7 @@ const CardSlider = ({ cardData }) => {
              className=""
              
       >
-        {cardData.map((card) => (
+        {serviceCards.map((card) => (
           <SwiperSlide className="swiper-slide-custom ">
             {/* <figure className="w-full"> */}
               <img className="w-full object-cover h-80 img" src={card.icon}/>
