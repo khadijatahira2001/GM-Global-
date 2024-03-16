@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
+
 import "../Styles/TestimonialStyle.css";
 import {
   Navigation,
@@ -14,7 +15,7 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-const Testimonial = ({ cardData }) => {
+const Testimonial = () => {
   return (
     <div>
       <h4 className="text-center font-bold text-4xl">Testimonials</h4>
@@ -45,14 +46,12 @@ const Testimonial = ({ cardData }) => {
         modules={[Autoplay, FreeMode, Mousewheel, Navigation, Pagination]}
         className=""
       >
-        {cardData.map((card) => (
+        {/* {testiMonial.map((card) => (
           <SwiperSlide className="swiper-slide-custom ">
-            {/* <figure className=" pt-10 mb-6  mr-20"> */}
             <img
               className="rounded-full w-20 h-20 ml-10 mr-16 mt-10"
               src={card.icon}
             />
-            {/* </figure> */}
             <div className="card-body items-center ">
               <h2 className="p-4 font-bold hover:text-primary">{card.title}</h2>
               <p className="p-6 ">
@@ -60,7 +59,7 @@ const Testimonial = ({ cardData }) => {
               </p>
             </div>
           </SwiperSlide>
-        ))}
+        ))} */}
       </Swiper>
     </div>
   );

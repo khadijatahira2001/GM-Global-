@@ -1,4 +1,5 @@
 import React from "react";
+import { simplecard } from '../Constants';
 
 const ServiceOptionCard = ({ title, icon, description }) => {
   return (
