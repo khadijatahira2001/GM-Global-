@@ -3,13 +3,17 @@ import ChatBubbleOutlineRoundedIcon from "@mui/icons-material/ChatBubbleOutlineR
 function Footer() {
   return (
     <div
-      className="text-center"
-      style={{ backgroundColor: "", height: "150px" }}
+      style={{
+        backgroundColor: "",
+        height: "200px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
-      <hr className="mr-32 ml-32 mb-8" />
-      Copyright © 2024 GM Global Inc. All Rights Reserved.
-      <hr class="mx-auto my-6 w-14 bg-blue-500" />
-      
+      <span>
+        Copyright © 2024 GM Global Inc. All Rights Reserved.
+      </span>
     </div>
   );
 }

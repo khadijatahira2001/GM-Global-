@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
-import ContactUs from "./Components/ContactUS";
-import AboutUs from "./Components/AboutUs";
-import Services from "./Components/Services";
+import ContactUs from "./Components/ContactUS/ContactUS";
+import AboutUs from "./Components/AboutUS/AboutUs";
+import Services from "./Components/ServicesSection/Services";
 
 import "./App.css";
 import { ThemeProvider, styled } from "@mui/material/styles";

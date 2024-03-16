@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../Shared/Cards";
+import Cards from "../../Shared/Cards";
 
 const Services = () => {
   return (
