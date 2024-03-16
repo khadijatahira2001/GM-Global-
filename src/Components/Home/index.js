@@ -7,7 +7,6 @@ import Testimonials from "../../Shared/Testimonials.js";
 import HeroSection from "./HeroSection.js";
 import CompanyProfile from "./CompanyProfile.js";
 import ServiceOptionCard from "../../Shared/ServiceOptionCard.js";
-import FooterBar from "./FooterBar.js";
 import "../../Styles/Home.css";
 const Home = () => {
   return (
@@ -25,8 +24,6 @@ const Home = () => {
         <OurServices cardData={OurServicesInfo} />
         {/* <Testimonials cardData={Testimonial} /> */}
       </div>
-
-      <FooterBar />
     </div>
   );
 };
