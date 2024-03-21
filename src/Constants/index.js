@@ -90,3 +90,66 @@ export const Testimonial = [
       "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
   },
 ];
+
+export const AboutOptionCardInfo = [
+  {
+    title: "Great Ideas",
+    icon: <img src={cd1} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Unleash the power of creativity and watch your projects come to life with precision and style. ",
+  },
+  {
+    title: "Quality Building    ",
+    icon: <img src={cd2} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Discover our restoration services that bring new life to old structures, We specialize in preserving the past while invorporating modern techniques for lasting results.",
+  },
+  {
+    title: "Quality Works    ",
+    icon: <img src={cd3} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      " Ensure the structural integrity of your building with our thorough inspection and testing services. Our experts provide detailed assessments to meet safety standards.",
+  },
+];
+export const ServiceCardInfo = [ 
+  {
+    title: "HOUSE RENOVATION    ",
+    icon: <img src={cd1} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Transforming homes with precision and style through innovative renovation services.",
+      
+  },
+  {
+    title: "CONSTRUCTION CONSULTANT    ",
+    icon: <img src={cd2} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Specialized construction consulting services providing innovative solutions for restoring.",
+  },
+  {
+    title: "GENERAL CONTRACTING",
+    icon: <img src={cd3} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Comprehensive construction services ensuring structural integrity and safety compliance.",
+  },
+];
+export const ServiceCardInfo2 = [ 
+  {
+    title: "LAMINATE FLOORING    ",
+    icon: <img src={cd1} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Transforming homes with precision and style through innovative renovation services.",
+      
+  },
+  {
+    title: "METAL ROOFING    ",
+    icon: <img src={cd2} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Specialized construction consulting services providing innovative solutions for restoring.",
+  },
+  {
+    title: "GENERAL CONTRACTING    ",
+    icon: <img src={cd3} alt="" className="rounded-xl w-32 h-32 ml-10" />,
+    description:
+      "Comprehensive construction services ensuring structural integrity and safety compliance.",
+  },
+];

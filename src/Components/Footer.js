@@ -175,7 +175,7 @@ function Footer() {
       </div>
 
       <div class="py-7 px-0 border-t border-white ">
-        <div class="container mx-auto px-6 text-center h-28 mt-10">
+        <div class="container mx-auto px-6 text-center mt-10">
           <div class="grid md:grid-cols-2 items-center">
             <div class="md:text-left text-center">
               <p>Copyright © 2024 GM Global Inc. All Rights Reserved.</p>
