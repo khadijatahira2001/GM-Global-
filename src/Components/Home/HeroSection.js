@@ -2,9 +2,8 @@ import React from "react";
 import { Box } from "@mui/material";
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-
+import Button from "../../Shared/Button.js";
 import "../../Styles/Home.css";
-
 const HeroSection = () => {
   const imagePaths = [
     "https://img.freepik.com/free-photo/beautiful-view-construction-site-city-during-sunset_181624-9347.jpg?w=996&t=st=1710190860~exp=1710191460~hmac=567b5cce350c3cc23faa65605c8a0e2c1afb4e01db6acae961492c049cb34b75",
@@ -105,13 +104,7 @@ const HeroSection = () => {
           New Construction | Restoration | Inspection | Testing
         </p>
 
-        <button
-          type="button"
-          class="text-black color:'#fb923c' bg-primary	 font-bold	text-xl px-5 py-2.5 text-center me-2 mt-6 w-60 h-16  
-      cursor-pointer hover:bg-orange-300	"
-        >
-          See What We Do
-        </button>
+        <Button>See What We Do</Button>
       </div>
       {/* </div> */}
     </Box>

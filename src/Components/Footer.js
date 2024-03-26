@@ -147,7 +147,7 @@ function Footer() {
                         href="#"
                         class="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
                       >
-                        Kitchener
+                        London
                       </a>
                     </li>
                     <li class="mt-[10px]">
@@ -155,7 +155,7 @@ function Footer() {
                         href="#"
                         class="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
                       >
-                        Calgary
+                        Waterloo Region
                       </a>
                     </li>
                     <li class="mt-[10px]">
@@ -163,7 +163,7 @@ function Footer() {
                         href="#"
                         class="text-gray-300 hover:text-gray-400 transition-all duration-500 ease-in-out"
                       >
-                        Victoria
+                        Niagara Falls
                       </a>
                     </li>
                   </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../Shared/Button";
 
 function CompanyProfile() {
   return (
@@ -37,20 +38,13 @@ function CompanyProfile() {
           projects across different industries, honing our skills and knowledge
           until we are prepared to establish our business.
         </p>
-        <p className="mt-6 font-normal text-content_color">
+        <p className="mt-6 font-normal text-content_color mb-20">
           GM Global is the result of our more than 20 years of dedication to the
           engineering field. We have been privileged enough to work on various
           projects across different industries, honing our skills and knowledge
           until we are prepared to establish our business.
         </p>
-
-        <button
-          type="button"
-          class="text-black color:'#fb923c' bg-primary font-bold	text-xl px-5 py-2.5 text-center lg:w-60  h-16  mt-20 mb-28
-      cursor-pointer hover:bg-orange-300	"
-        >
-          About Us
-        </button>
+        <Button>About Us</Button>
       </div>
     </div>
   );

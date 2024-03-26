@@ -13,12 +13,6 @@ const ServiceCards = ({ title, icon, description }) => {
           <p className="text-content_color p-10">{description}</p>
         </div>
       </div>
-      <div className="pb-4 mb-8">
-      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg border border-primary text-primary p-2 hover:bg-primary hover:text-white rounded-md">
-        Learn More
-      </button>
-      </div>
-   
     </div>
   );
 };

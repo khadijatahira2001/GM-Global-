@@ -90,6 +90,7 @@ function Header(props) {
         sx={{
           backgroundColor: "white",
           color: "black",
+          height: 100,
         }}
       >
         <Container maxWidth="xl">
@@ -98,6 +99,7 @@ function Header(props) {
             id="main_tool_bar"
             style={{
               display: "flex",
+              marginTop: 10,
             }}
             sx={{ justifyContent: { xs: "flex-start", md: "space-between" } }}
           >

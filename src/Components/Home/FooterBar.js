@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../Shared/Button";
 // import img from "../Assets/footer_img.jpg";
 
 const FooterBar = () => {
@@ -10,12 +11,7 @@ const FooterBar = () => {
           Are you looking for Construction <br />
           and Industrial Experts?
         </p>
-        <button
-          type="button"
-          className="text-black bg-primary font-bold text-xl px-8 py-3.5 cursor-pointer hover:bg-orange-300 w-52 mt-4 md:mt-0"
-        >
-          Contact Us
-        </button>
+      <Button>Contact Us</Button>
       </div>
     </div>
   );

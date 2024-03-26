@@ -7,6 +7,7 @@ import { ServiceCardInfo2 } from "../../Constants/index.js";
 import serviceImg from "../../Assets/cd1.png";
 import serviceImg1 from "../../Assets/cd2.png";
 import serviceImg2 from "../../Assets/cd3.png";
+import Button from "../../Shared/Button.js";
 const Services = () => {
   return (
     <div className="items-center ">
@@ -26,16 +27,18 @@ const Services = () => {
         </div>
       </div>
       <div className="mt-20 mb-10 p-10">
-  <h1 className="font-bold text-4xl text-center mb-6">SEE OUR RECENT PROJECTS</h1>
-  <p className="text-center text-lg lg:text-2xl text-content_color mx-auto max-w-4xl mb-6">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.
-  </p>
-  <div className="flex justify-center">
-    <button className="btn btn-md lg:btn-lg border border-primary hover:text-primary hover:bg-white py-3 px-6 lg:px-8 bg-primary text-white rounded-md">
-      View All Projects
-    </button>
-  </div>
-</div>
+        <h1 className="font-bold text-4xl text-center mb-6">
+          SEE OUR RECENT PROJECTS
+        </h1>
+        <p className="text-center text-lg lg:text-2xl text-content_color mx-auto max-w-4xl mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde
+          impedit, necessitatibus, soluta sit quam minima expedita atque
+          corrupti reiciendis.
+        </p>
+        <div className="flex justify-center">
+          <Button>View All Projects</Button>
+        </div>
+      </div>
     </div>
   );
 };
